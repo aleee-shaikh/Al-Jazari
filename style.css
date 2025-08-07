@@ -105,3 +105,32 @@ img.robot {
     flex-direction: column;
   }
 }
+
+
+/* === UI Enhancements === */
+body {
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* 3. Improved bullet styling */
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Social links in footer */
+footer .social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #1e90ff;
+  font-size: 1.2rem;
+}
