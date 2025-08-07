@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al-Jazari Robot Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🤖 Al-Jazari-1</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hardware">Hardware</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Let's make your life easier & happier</h2>
+        <p>Al-Jazari-1 is your intelligent home assistant, designed to support everyday tasks — from load carrying to real-time surveillance.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Al-Jazari-1</h2>
+        <p>Al-Jazari-1 is a wireless, teleoperated service robot designed to assist with daily household tasks. Its primary goal is to help users by providing mobility support, load carrying, and home surveillance. The robot can carry items such as food, drinks, and other small loads, and is capable of autonomous patrolling within indoor environments.</p>
+        <p>From a technical standpoint, Al-Jazari-1 was built to be affordable, portable, and easy to control. It is powered by an Arduino Uno and controlled via Bluetooth (HC-05), with integrated DC motors enabling smooth movement, arm articulation, gripper control, and base rotation. The robot also features real-time video streaming viewable on a laptop and includes an interactive, animated AI presenter powered by Gemini LLM, capable of answering user queries in natural language.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Robot Images</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="images/robot1.jpg" alt="Robot Arm" class="robot" />
+                <p>Robot Arm Prototype</p>
+            </div>
+            <div class="image-card">
+                <img src="images/robot1.jpg" alt="Mobile Controlled Robot" class="robot" />
+                <p>Mobile Controlled View</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hardware">
+        <h2>Hardware Components</h2>
+        <ul>
+            <li>Arduino UNO R3 – Main microcontroller board</li>
+            <li>9× DC Motors – For movement, arm lift, base rotation, and gripper control</li>
+            <li>Aluminum Frame – Lightweight and durable structural body</li>
+            <li>12V Battery – Power source for motors and electronics</li>
+            <li>
+                Android Mobile Device – Used for:
+                <ul>
+                    <li>1. Running the assistant app (Gemini LLM)</li>
+                    <li>2. Providing real-time video via mobile camera</li>
+                </ul>
+            </li>
+            <li>HC-05 Bluetooth Module – For wireless control</li>
+            <li>Motor Driver Modules (e.g., L298N) – To control DC motors</li>
+            <li>Wheels For movement</li>
+        </ul>
+    </section>
+
+    <section id="software">
+        <h2>Software Stack</h2>
+        <ul>
+            <li>
+                C# with Emgu CV<br />
+                Used for real-time video streaming from the robot to a laptop, enabling remote monitoring and navigation.
+            </li>
+            <li>
+                HTML, JavaScript, and CSS<br />
+                Developed the front-end interface of the assistant app, providing a user-friendly experience for interaction.
+            </li>
+            <li>
+                Gemini LLM (via Web Integration)
+                <br />
+                Powers the animated AI assistant, capable of answering voice or text-based queries in natural language.
+            </li>
+        </ul>
+    </section>
+
+    <section id="team">
+        <h2>Team Members</h2>
+        <div class="team-grid">
+            <div class="member">
+                <h3>Muhammad Ali</h3>
+                <p>Lead Developer & Robotics Engineer</p>
+            </div>
+            <div class="member">
+                <h3>Muhammad Azan</h3>
+                <p>Systems Integration Engineer & Mechanical Designer</p>
+            </div>
+            <div class="member">
+                <h3>Muhammad Ayan</h3>
+                <p>Quality Assurance & Testing Engineer</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p class="form-status"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Al-Jazari Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
