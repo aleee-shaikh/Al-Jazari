@@ -14,10 +14,11 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#future-improvements">Future Improvements</a></li>
+                <li><a href="#schematics">Schematics</a></li>
                 <li><a href="#hardware">Hardware</a></li>
                 <li><a href="#software">Software</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,6 +26,12 @@
     <section id="hero">
         <h2>Let's make your life easier & happier</h2>
         <p>Al-Jazari is your intelligent home assistant, designed to support everyday tasks — from load carrying to real-time surveillance.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/qxtJ_X45PQ4"
+                    title="Robot Arm Live Demo"
+                    allowfullscreen>
+            </iframe>
+        </div>
     </section>
 
     <section id="about">
@@ -33,19 +40,84 @@
         <p>From a technical standpoint, Al-Jazari-1 was built to be affordable, portable, and easy to control. It is powered by an Arduino Uno and controlled via Bluetooth (HC-05), with integrated DC motors enabling smooth movement, arm articulation, gripper control, and base rotation. The robot also features real-time video streaming viewable on a laptop and includes an interactive, animated AI presenter powered by Gemini LLM, capable of answering user queries in natural language.</p>
     </section>
 
-    <section id="gallery">
-        <h2>Robot Images</h2>
-        <div class="image-grid">
-            <div class="image-card">
-                <img src="images/robot1.jpg" alt="Robot Arm" class="robot" />
-                <p>Robot Arm Prototype</p>
-            </div>
-            <div class="image-card">
-                <img src="images/robot1.jpg" alt="Mobile Controlled Robot" class="robot" />
-                <p>Mobile Controlled View</p>
-            </div>
+    <!-- Future Improvements Section -->
+    <section id="future-improvements" style="padding: 50px 20px; background-color: #f8f9fa; font-family: 'Poppins', sans-serif;">
+        <div style="margin: auto;">
+            <h2>Future Improvements</h2>
+            <ul style="list-style-type: disc; padding-left: 40px; color: #555; font-size: 1.1em; line-height: 1.8;">
+                <li><strong>🤖 Enhanced AI Decision-Making</strong> <p>Integrate advanced ML models for improved navigation and obstacle avoidance.</p></li>
+                <li><strong>🗺 Autonomous Operation</strong> <p>Add GPS navigation and autonomous path planning to reduce manual control.</p></li>
+                <li><strong>🎤 Voice Command Support</strong><p>Enable intuitive voice-based commands for better user interaction.</p></li>
+                <li><strong>🔋 Extended Battery Life</strong><p>Upgrade to high-capacity, lightweight batteries for longer operation.</p></li>
+                <li><strong>🛠 Modular Attachments</strong><p>Add swappable tools such as cleaning brushes, trays, or stabilizers.</p></li>
+                <li><strong>🗣 Multilingual support for the assistant app.</strong><p>Multi-language support for the assistant app.</p></li>
+            </ul>
         </div>
     </section>
+
+    <section id="gallery">
+        <h2>Robot Gallery</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="images/robot-arm-front.JPG" alt="Front view of robot arm" class="imgModal" onclick="openModal(this)" />
+                <p>Front view of robot arm</p>
+            </div>
+            <div class="image-card">
+                <img src="images/robot-arm-side.JPG" alt="Side view showing motors and joints" class="robot" onclick="openModal(this)" />
+                <p>Side view showing motors and joints</p>
+            </div>
+            <div class="image-card">
+                <img src="images/robot-arm-top.JPG" alt="Top view layout of robot arm" class="robot" onclick="openModal(this)" />
+                <p>Top view layout of robot arm</p>
+            </div>
+            <div class="image-card">
+                <img src="images/robot-arm-gripper.JPG" alt="Close-up of gripper mechanism" class="robot" onclick="openModal(this)" />
+                <p>Close-up of gripper mechanism</p>
+            </div>
+            <div class="image-card">
+                <img src="images/robot-arm-camera-view.JPG" alt="Live camera view from robot arm's perspective" class="robot" onclick="openModal(this)" />
+                <p>Live camera view from robot arm's perspective</p>
+            </div>
+            <div class="image-card">
+                <img src="images/robot-arm-chat-agent.JPG" alt="Chat agent interface interacting with robot arm" class="robot" onclick="openModal(this)" />
+                <p>Chat agent interface interacting with robot arm</p>
+            </div>
+        </div>
+        <div id="imgModal" class="modal" onclick="closeModal()">
+            <div id="caption"></div>
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+
+        </div>
+    </section>
+
+    <!-- Schematics Section -->
+    <section id="schematics">
+        <h2 class="section-title">Schematics</h2>
+        <p class="section-description">
+            Wiring diagrams, PCB layouts, and circuit schematics for the robot project.
+        </p>
+
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="images/schematic.PNG" alt="Schematic diagram" class="imgModal" onclick="openModal(this)" />
+                <p>Schematic diagram</p>
+            </div>
+            <div class="image-card">
+                <img src="images/circuit.PNG" alt="Circuit diagram" class="imgModal" onclick="openModal(this)" />
+                <p>Circuit diagram</p>
+            </div>
+        </div>
+
+        <!-- Modal for Schematics -->
+        <div id="imgModal" class="modal" onclick="closeModal()">
+            <div id="caption"></div>
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </section>
+
+
 
     <section id="hardware">
         <h2>Hardware Components</h2>
@@ -90,43 +162,55 @@
         <h2>Team Members</h2>
         <div class="team-grid">
             <div class="member">
+                <img src="images/MuhammadAli.JPG">
                 <h3>Muhammad Ali</h3>
                 <p>Lead Developer & Robotics Engineer</p>
             </div>
             <div class="member">
+                <img src="images/MuhammadAzan.JPG">
                 <h3>Muhammad Azan</h3>
                 <p>Systems Integration Engineer & Mechanical Designer</p>
             </div>
             <div class="member">
+                <img src="images/MuhammadAyan.JPG">
                 <h3>Muhammad Ayan</h3>
                 <p>Quality Assurance & Testing Engineer</p>
             </div>
         </div>
     </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p class="form-status"></p>
+    <section class="back-to-top-section">
+        <a href="#top" class="go-to-top-btn" title="Back to Top">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/collapse-arrow.png" alt="Up Arrow">
+            <span>Back to Top</span>
+        </a>
     </section>
-
     <footer>
-        
-<div class="social-links">
-  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://www.youtube.com/@skillstrip4326" target="_blank"><i class="fab fa-youtube"></i></a>
-  <a href="mailto:aleee_shaikh@yahoo.com"><i class="fas fa-envelope"></i></a>
-  <a href="tel:+923433443057"><i class="fas fa-phone"></i> +923433443057</a>
-</div>
+
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@skillstrip4326" target="_blank"><i class="fab fa-youtube red"></i></a>
+            <a href="mailto:aleee_shaikh@yahoo.com"><i class="fas fa-envelope steelblue"></i></a>
+            <a href="tel:+923433443057"><i class="fas fa-phone green"></i> +923433443057</a>
+        </div>
 
         <p>&copy; 2025 Al-Jazari Project. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function openModal(imgElement) {
+            const modal = document.getElementById("imgModal");
+            const modalImg = document.getElementById("modalImg");
+            const caption = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+            caption.innerHTML = imgElement.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("imgModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
